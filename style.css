@@ -1,4 +1,4 @@
-/* Aumenta la specificità per la freccia del dropdown */
+
 .navbar .dropdown .dropdown-toggle::after {
   border-top-color: white ; /* Colore della freccia */
 }
@@ -10,45 +10,40 @@
 
 /* Stile per l'immagine del profilo */
 .avatar-img {
-  width: 2.5rem; /* Larghezza desiderata */
-  height: auto; /* Altezza desiderata */
-  object-fit: cover; /* Mantiene le proporzioni dell'immagine */
+  width: 2.5rem; 
+  height: auto; 
+  object-fit: cover; 
 }
 
 #kids-icon{
-    width: 2.5rem; /* Larghezza desiderata */
-    height: auto; /* Altezza desiderata */
-    object-fit: cover; /* Mantiene le proporzioni dell'immagine */
+    width: 2.5rem; 
+    height: auto; 
+    object-fit: cover; 
 }
 
 /* Aggiungi trasparenza al dropdown */
 .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.8) !important; /* Nero con 80% di opacità */
-  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Bordo con trasparenza */
-  border-radius: 0 !important; /* Bordi acuti */
+  background-color: rgba(0, 0, 0, 0.8) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; 
+  border-radius: 0 !important; 
 }
 
 .dropdown-item {
-  color: white !important; /* Testo bianco */
+  color: white !important; 
 }
 
 .dropdown-item:hover {
-  color: black !important; /* Cambia colore del testo al passaggio del mouse */
-  background-color: rgba(255, 255, 255, 0.2) !important; /* Sfondo con trasparenza al passaggio del mouse */
+  color: black !important; 
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .dropdown-divider {
-  border-color: rgba(255, 255, 255, 0.2) !important; /* Divisore con trasparenza */
+  border-color: rgba(255, 255, 255, 0.2) !important; 
 }
 
 footer .container{
     max-width: 50%;
 }
-
-
-
-/* ----------------- */
-
 
 
 .carousel-inner {
@@ -65,7 +60,7 @@ footer .container{
 }
 
 
-
+/* ----------------- */
 
 /* seconda pagina */
 
@@ -108,8 +103,8 @@ footer .container{
     border: 1px solid white; 
     border-radius: 0; 
     color: white; 
-    padding: 10px 20px; 
-    margin: 5px; 
+    padding: 1em 2em; 
+    margin: 1em; 
     transition: background-color 0.3s ease; 
 }
 
@@ -124,8 +119,8 @@ footer .container{
     border: 1px solid white; 
     border-radius: 0; 
     color: white; 
-    padding: 10px 20px; 
-    margin: 5px; 
+    padding: 1em 2em; 
+    margin: auto; 
     transition: background-color 0.3s ease; 
 }
 
@@ -142,6 +137,10 @@ footer .container{
     display: none;
 }
 
+.form-check {
+    padding-left: 0
+}
+
 /* Stile per la checkbox personalizzata */
 .form-check-label {
     display: flex;
@@ -154,12 +153,12 @@ footer .container{
 .form-check-label::before {
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 2em;
+    height: 2em;
     background-color: #333;
     border: 2px solid white;
-    border-radius: 0px;
-    margin-right: 10px;
+    border-radius: 0;
+    margin-right: 1em;
     cursor: pointer;
     position: relative; /* Aggiunto per posizionare correttamente il checkmark */
 }
@@ -175,10 +174,10 @@ footer .container{
     content: "";
     display: inline-block;
     position: absolute;
-    left: 7px; 
-    top: 4px;
-    width: 5px;
-    height: 10px;
+    left: 0.8em; 
+    top: 0.8em;
+    width: 0.5em;
+    height: 1em;
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
