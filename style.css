@@ -1,6 +1,7 @@
 
 .navbar .dropdown .dropdown-toggle::after {
   border-top-color: white ; /* Colore della freccia */
+  margin-left: 0
 }
 
 /* .navbar .dropdown .dropdown-toggle.show{
