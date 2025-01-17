@@ -1,0 +1,186 @@
+/* Aumenta la specificità per la freccia del dropdown */
+.navbar .dropdown .dropdown-toggle::after {
+  border-top-color: white ; /* Colore della freccia */
+}
+
+/* .navbar .dropdown .dropdown-toggle.show{
+    width: 100%;
+  }
+ */
+
+/* Stile per l'immagine del profilo */
+.avatar-img {
+  width: 2.5rem; /* Larghezza desiderata */
+  height: auto; /* Altezza desiderata */
+  object-fit: cover; /* Mantiene le proporzioni dell'immagine */
+}
+
+#kids-icon{
+    width: 2.5rem; /* Larghezza desiderata */
+    height: auto; /* Altezza desiderata */
+    object-fit: cover; /* Mantiene le proporzioni dell'immagine */
+}
+
+/* Aggiungi trasparenza al dropdown */
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8) !important; /* Nero con 80% di opacità */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Bordo con trasparenza */
+  border-radius: 0 !important; /* Bordi acuti */
+}
+
+.dropdown-item {
+  color: white !important; /* Testo bianco */
+}
+
+.dropdown-item:hover {
+  color: black !important; /* Cambia colore del testo al passaggio del mouse */
+  background-color: rgba(255, 255, 255, 0.2) !important; /* Sfondo con trasparenza al passaggio del mouse */
+}
+
+.dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.2) !important; /* Divisore con trasparenza */
+}
+
+footer .container{
+    max-width: 50%;
+}
+
+
+
+/* ----------------- */
+
+
+
+.carousel-inner {
+    overflow: visible;
+}
+
+.carousel-item img {
+    transition: transform .5s;
+}
+
+.carousel-item img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+
+/* seconda pagina */
+
+.dropdown-toggle::after {
+    margin-left: 3em; 
+}
+
+.form-control {
+    background-color: grey;
+    border: 0;
+    border-radius: 0;
+}
+
+
+.profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+.form-label {
+    font-weight: bold;
+    color: white;
+}
+.form-control, .form-select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #444;
+    color: white;
+    border-color: #e50914;
+    box-shadow: none;
+}
+
+/* Stile per i pulsanti */
+
+.btn-custom {
+    background-color: gray; 
+    border: 1px solid white; 
+    border-radius: 0; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-custom:hover {
+    background-color: white!important;
+    color:gray;
+    border: 1px solid grey
+}
+
+.btn-save {
+    background-color: gray; 
+    border: 1px solid white; 
+    border-radius: 0; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn-save:hover {
+    background-color: white!important;
+    color:gray;
+    border: 1px solid grey
+}
+
+/* Stile checkbox */
+
+  /* Nascondi la checkbox nativa */
+  .form-check-input {
+    display: none;
+}
+
+/* Stile per la checkbox personalizzata */
+.form-check-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    position: relative; /* Aggiunto per posizionare correttamente il checkmark */
+}
+
+.form-check-label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border: 2px solid white;
+    border-radius: 0px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative; /* Aggiunto per posizionare correttamente il checkmark */
+}
+
+/* Stile quando la checkbox è selezionata */
+.form-check-input:checked + .form-check-label::before {
+    background-color: #e5091400; 
+    border-color: white;
+}
+
+/* Icona di spunta (checkmark) */
+.form-check-input:checked + .form-check-label::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 7px; 
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+

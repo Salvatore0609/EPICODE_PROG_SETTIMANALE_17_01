@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <title>NETFLIX CLONE</title>
+  </head>
+
+  <body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Logo o brand -->
+                <a class="navbar-brand" href="#">
+                    <img src="./Netflix-assets/assets/netflix_logo.png" alt="Netflix Logo" width="100" height="auto">
+                </a>
+        
+                <!-- Bottone per il menu a tendina su dispositivi mobili -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Contenuto della navbar -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TV Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">New & Popular</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My List</a>
+                        </li>
+                    </ul>
+        
+                    <!-- Elementi allineati a destra -->
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                                  </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <!-- Immagine del profilo (pulsante del dropdown) -->
+                                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <!--  -->
+                                    <img src="./Netflix-assets/assets/avatar.png" alt="avatar" class="avatar-img img-fluid" >
+                                </a>
+                                <!-- Menu a tendina personalizzato -->
+                                <ul class="dropdown-menu dropdown-menu-end bg-dark text-secondary rounded-0 border border-white shadow">
+                                    <li>
+                                        <a class="dropdown-item text-white" href="#">
+                                            <img id="kids-icon" src="./Netflix-assets/assets/kids_icon.png" alt="kids_icon">
+                                        </a>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                                        </svg>
+                                        <a class="dropdown-item text-white" href="./profile.html">Manage Profiles</a>
+                                    </li>
+
+                                    <li class="d-flex align-items-center px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ProfileArrowStandard" aria-hidden="true">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1C3.79086 1 2 2.79086 2 5V17C2 19.2091 3.79086 21 6 21H9.58579L8.29289 22.2929L9.70711 23.7071L12.7071 20.7071C13.0976 20.3166 13.0976 19.6834 12.7071 19.2929L9.70711 16.2929L8.29289 17.7071L9.58579 19H6C4.89543 19 4 18.1046 4 17V5C4 3.89543 4.89543 3 6 3H18C19.1046 3 20 3.89543 20 5V17C20 18.1046 19.1046 19 18 19H15V21H18C20.2091 21 22 19.2091 22 17V5C22 2.79086 20.2091 1 18 1H6ZM7.5 10C8.32843 10 9 9.32843 9 8.5C9 7.67157 8.32843 7 7.5 7C6.67157 7 6 7.67157 6 8.5C6 9.32843 6.67157 10 7.5 10ZM18 8.5C18 9.32843 17.3284 10 16.5 10C15.6716 10 15 9.32843 15 8.5C15 7.67157 15.6716 7 16.5 7C17.3284 7 18 7.67157 18 8.5ZM16.402 12.1985C15.7973 12.6498 14.7579 13 13.5 13C12.2421 13 11.2027 12.6498 10.598 12.1985L9.40195 13.8015C10.4298 14.5684 11.9192 15 13.5 15C15.0808 15 16.5702 14.5684 17.598 13.8015L16.402 12.1985Z" fill="currentColor"></path>
+                                        </svg>
+                                        <a class="dropdown-item text-white" href="#">Transfer Profile</a>
+                                    </li>
+
+                                    <li class="d-flex align-items-center px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                        </svg>
+                                        <a class="dropdown-item text-white" href="#">Account</a>
+                                    </li>
+                                    <li class="d-flex align-items-center px-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                                        </svg>
+                                        <a class="dropdown-item text-white" href="#">Help Center</a>
+                                    </li>
+                                    <li><hr class="dropdown-divider bg-white"></li>
+                                    <li><a class="dropdown-item text-white" href="#">Sign Out of Netflix</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ---------------------------------------- -->
+    <main>
+      <section>
+        <div class="container-fluid py-2">
+
+          <div class="d-flex gap-3">
+            <h1 class="text-white fs-3 fw-bold mb-0 pb-3">Tv Shows</h1>
+
+            <div class="dropdown">
+              <button class="btn bg-dark text-white rounded-0 border border-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Genres</button>
+              <ul class="dropdown-menu bg-dark text-white rounded-0 border border-white shadow">
+                <li><a class="dropdown-item text-white" href="#">Teen</a></li>
+                <li><a class="dropdown-item text-white" href="#">Anime</a></li>
+                <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                <li><a class="dropdown-item text-white" href="#">Kids</a></li>
+                <li><a class="dropdown-item text-white" href="#">British</a></li>
+                <li><a class="dropdown-item text-white" href="#">Comedies</a></li>
+                <li><a class="dropdown-item text-white" href="#">Docuseries</a></li>
+                <li><a class="dropdown-item text-white" href="#">Dramas</a></li>
+                <li><a class="dropdown-item text-white" href="#">European</a></li>
+                <li><a class="dropdown-item text-white" href="#">Sci-Fi & Fantasy</a></li>
+                <li><a class="dropdown-item text-white" href="#">Mystery & Thriller</a></li>
+                <li><a class="dropdown-item text-white" href="#">Horror</a></li>
+                <li><a class="dropdown-item text-white" href="#">International</a></li>
+                <li><a class="dropdown-item text-white" href="#">Italian</a></li>
+                <li><a class="dropdown-item text-white" href="#">Reality & Talk Shows</a></li>
+                <li><a class="dropdown-item text-white" href="#">Romantic</a></li>
+                <li><a class="dropdown-item text-white" href="#">Science & Nature</a></li>
+                <li><a class="dropdown-item text-white" href="#">Sports</a></li>
+                <li><a class="dropdown-item text-white" href="#">Thriller</a></li>
+                <li><a class="dropdown-item text-white" href="#">USA</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- ------------------------------------------------- -->
+          <h2 class="text-white fs-6 fw-bold mb-0">Trending now</h2>
+          <div id="trending-now" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media0.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media1.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media2.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media3.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media4.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media5.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media6.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media7.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media8.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media9.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media10.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media11.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1 p-1">
+                      <img src="./Netflix-assets/assets/media/media12.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1 p-1">
+                      <img src="./Netflix-assets/assets/media/media13.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1 p-1">
+                      <img src="./Netflix-assets/assets/media/media14.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1 p-1">
+                      <img src="./Netflix-assets/assets/media/media15.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1 p-1">
+                      <img src="./Netflix-assets/assets/media/media16.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1 p-1">
+                      <img src="./Netflix-assets/assets/media/media17.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev top-50 start-0 translate-middle" type="button" data-bs-target="#trending-now" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon w-25" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next top-50 start-100 translate-middle" type="button" data-bs-target="#trending-now" data-bs-slide="next">
+              <span class="carousel-control-next-icon w-25" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="container-fluid py-2">
+          <h2 class="text-white fs-6 fw-bold mb-0">Watch It Again</h2>
+          <div id="watch-it-again" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media18.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media19.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media20.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media21.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media22.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media23.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media24.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media25.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media26.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media27.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media28.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media29.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media30.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media31.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media32.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media0.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media1.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media2.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev top-50 start-0 translate-middle" type="button" data-bs-target="#watch-it-again" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon w-25" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next top-50 start-100 translate-middle"
+              type="button"
+              data-bs-target="#watch-it-again"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon w-25" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="container-fluid py-2">
+          <h2 class="text-white fs-6 fw-bold mb-0">New Release</h2>
+          <div id="new-release" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media3.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media4.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media5.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media6.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media7.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media8.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media9.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media10.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media11.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media12.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media13.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media14.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media15.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media16.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media17.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media18.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media19.webp" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6 p-1">
+                      <img src="./Netflix-assets/assets/media/media20.jpg" class="d-block w-100 img-fluid" alt="..." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev top-50 start-0 translate-middle" type="button" data-bs-target="#new-release" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon w-25" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next top-50 start-100 translate-middle" type="button" data-bs-target="#new-release" data-bs-slide="next">
+              <span class="carousel-control-next-icon w-25" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ---------------------------------------- -->
+    <footer class="footer text-secondary py-4 ">
+        <div class="container mx-auto">
+            <div class="d-flex gap-3 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                  </svg>
+            </div>
+            <div class="row">
+                <!-- Colonna 1 -->
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Audio and Subtitles</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Audio Description</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Gift Cards</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Colonna 2 -->
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Media Center</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Investor Relations</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Jobs</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Terms of Use</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Colonna 3 -->
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Privacy</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Legal Notices</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Cookie Preferences</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Corporate Information</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Colonna 4 -->
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-secondary text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Service Code e Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <p class="mb-1">Service Code</p>
+                    <p class="mb-0">© 1997-2019 Netflix, Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- --------------------------------------------- -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
